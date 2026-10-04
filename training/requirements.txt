@@ -1,0 +1,13 @@
+torch  # TODO pin
+torchvision  # TODO pin
+numpy  # TODO pin
+Pillow  # TODO pin
+scikit-learn  # TODO pin
+pandas  # TODO pin
+matplotlib  # TODO pin
+optuna  # TODO pin
+wandb  # TODO pin
+onnx  # TODO pin
+onnxruntime  # TODO pin
+torchmetrics  # TODO pin (SSIM functional API)
+PyYAML  # TODO pin

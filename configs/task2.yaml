@@ -1,0 +1,26 @@
+task: task2
+seed: 42
+classifier_search:
+  study_name: task2_cls
+  direction: maximize
+  trials: 20
+  epochs: 6
+specialist_search:
+  study_name: task2_specialists
+  direction: minimize
+  trials: 20
+  epochs: 6
+final:
+  classifier:
+    # NOTE: Notebook source loads the best Optuna row; its cell output omits the saved best config.
+    from_study: task2_cls
+    epochs: 30
+  specialists:
+    lr: 0.0007274920213019986
+    batch_size: 16
+    latent_ch: 32
+    base_ch: 64
+    dropout: 0.011854820618336426
+    alpha: 0.557340801610828
+    arch: spatial
+    epochs: 40

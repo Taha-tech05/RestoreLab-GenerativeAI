@@ -1,0 +1,2 @@
+/** @type {import('tailwindcss').Config} */
+export default { darkMode: 'class', content: ['./index.html', './src/**/*.{ts,tsx}'], theme: { extend: { colors: { canvas: 'var(--canvas)', panel: 'var(--panel)', muted: 'var(--muted)', ink: 'var(--ink)', subtle: 'var(--subtle)', line: 'var(--line)', brand: '#4f46e5', good: '#047857' }, fontFamily: { sans: ['Geist', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, boxShadow: { card: '0 1px 3px rgba(15,23,42,.04), 0 1px 2px rgba(15,23,42,.02)' }, borderRadius: { card: '16px' } } }, plugins: [] }

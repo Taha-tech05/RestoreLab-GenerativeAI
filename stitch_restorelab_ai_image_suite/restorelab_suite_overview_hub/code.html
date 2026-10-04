@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#faf8ff","background":"#faf8ff","on-primary-fixed":"#0f0069","on-primary":"#ffffff","secondary-container":"#6063ee","surface-dim":"#d2d9f4","tertiary-container":"#006e4b","secondary-fixed-dim":"#c0c1ff","primary-container":"#4f46e5","surface":"#faf8ff","primary-fixed":"#e2dfff","on-error-container":"#93000a","on-tertiary-container":"#67f4b7","on-secondary":"#ffffff","tertiary-fixed-dim":"#4edea3","error":"#ba1a1a","primary-fixed-dim":"#c3c0ff","on-secondary-fixed":"#07006c","surface-container-high":"#e2e7ff","on-tertiary-fixed-variant":"#005236","surface-container":"#eaedff","secondary-fixed":"#e1e0ff","primary":"#3525cd","inverse-on-surface":"#eef0ff","tertiary":"#005338","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#2f2ebe","on-tertiary":"#ffffff","outline":"#777587","on-surface":"#131b2e","surface-container-lowest":"#ffffff","inverse-primary":"#c3c0ff","on-surface-variant":"#464555","surface-variant":"#dae2fd","on-secondary-container":"#fffbff","inverse-surface":"#283044","outline-variant":"#c7c4d8","on-background":"#131b2e","on-primary-fixed-variant":"#3323cc","surface-container-highest":"#dae2fd","on-tertiary-fixed":"#002113","surface-tint":"#4d44e3","on-error":"#ffffff","on-primary-container":"#dad7ff","surface-container-low":"#f2f3ff","error-container":"#ffdad6","secondary":"#4648d4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2.5rem","margin":"2rem","gutter-mobile":"0.75rem"},"fontFamily":{"label-md":["JetBrains Mono"],"headline-md":["Geist"],"body-sm":["Geist"],"label-sm":["JetBrains Mono"],"display-lg":["Geist"],"display-lg-mobile":["Geist"],"headline-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-md":["Geist"],"label-lg":["JetBrains Mono"],"body-lg":["Geist"],"headline-lg":["Geist"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: geist
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMMOLOQUaexaluksFu3eAZMsSENZbMctQGUh6TO9e230SY3YexL9u8-Uf4vzDmr3f5ciFJrM8xwGEkLUpzkPz-0yH3zuaI1CLLRW6vFnNuMfdWs9q6OMd5TKZq9_jklQE4MgIC2y1C4hBx8OcNK4G6JFzx-Mj2Zd_ZYKg5FBpsbhXzQvW-lEWnzJWj4g2v6BAFA0rDm6d3PtHgTGgGoTlICGRwpBTz4wvew6tMWRtRhl05W3duHVu1wuY"/><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">RestoreLab</span><span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">v2.4</span></div></div><div class="flex items-center gap-space-md"><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Backend: Online</span></div><button aria-label="Toggle color mode" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="hidden md:flex fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex-col py-space-lg px-space-md"><div class="px-space-sm mb-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Workspaces</span></div><nav class="flex-1 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="flex flex-col px-space-sm py-2 transition-colors bg-primary-container text-on-primary rounded-lg" data-path="overview-and-suite-hub" href="#"><span class="font-body-md text-body-md leading-snug">Overview & Suite Hub</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Suite central connector</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="universal-restoration" href="#"><span class="font-body-md text-body-md leading-snug">Universal Restoration</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Single Autoencoder Baseline</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hard-routed-restoration" href="#"><span class="font-body-md text-body-md leading-snug">Hard-Routed Restoration</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Discrete Classifier Routing</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="soft-mixture-of-experts" href="#"><span class="font-body-md text-body-md leading-snug">Soft Mixture-of-Experts</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Continuous Latent Blending</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="face-to-sketch-generator" href="#"><span class="font-body-md text-body-md leading-snug">Face-to-Sketch Generator</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Conditional GAN Synthesis</span></a></nav></aside><div class="md:pl-72 flex flex-col min-h-screen"><main class="w-full pt-16 pb-20 md:pb-gutter px-gutter-mobile md:px-gutter flex-1 bg-background"><div class="flex flex-col w-full">
+<!-- Top Hub Overview Bar -->
+<div class="w-full flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">RestoreLab AI Suite</span>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">ONNX Runtime · CPU · input 128×128</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Unified deep learning framework for multi-task restoration, dynamic classifier routing, continuous MoE fusion, and face-to-sketch synthesis.
+      </p>
+</div>
+<!-- Telemetry Pill Indicators -->
+<div class="flex items-center gap-space-sm self-start md:self-auto flex-wrap">
+<div class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Quantization</span>
+<span class="font-label-md text-label-md text-on-surface">FP32 / INT8 Hybrid</span>
+</div>
+<div class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dispatch Core</span>
+<span class="font-label-md text-label-md text-primary font-medium">Active (Local Loopback)</span>
+</div>
+</div>
+</div>
+<!-- Dispatch Pipeline Interactive Visualization -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-xl">
+<div class="flex items-center justify-between mb-space-md flex-wrap gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Architecture Pipeline</span>
+<span class="font-label-sm text-label-sm text-primary-container font-medium">Tensor Stream (B=1, C=3, H=128, W=128)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dynamic Execution Graph</span>
+</div>
+<!-- Pipeline Steps -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Ingestion Node -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Source Layer</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Ingestion Tensor</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">128×128 float32 [-1, 1]</span>
+</div>
+<!-- Stage 1 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Stage 01</span>
+<span class="font-label-sm text-label-sm text-secondary">24ms</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Universal AE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Single baseline bottleneck</span>
+</div>
+<!-- Stage 2 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Stage 02</span>
+<span class="font-label-sm text-label-sm text-secondary">6+18ms</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Hard-Routed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Argmax classifier routing</span>
+</div>
+<!-- Stage 3 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Stage 03</span>
+<span class="font-label-sm text-label-sm text-secondary">26ms</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Soft MoE Gate</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Latent continuous fusion</span>
+</div>
+<!-- Stage 4 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Stage 04</span>
+<span class="font-label-sm text-label-sm text-secondary">32ms</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Face-to-Sketch</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Conditional GAN synth</span>
+</div>
+</div>
+</div>
+<!-- Main Section: Workspaces in this Suite -->
+<div class="w-full flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Workspaces in this Suite</h2>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">4 Workspaces</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline-block">Click Launch to open dedicated workspace canvas</span>
+</div>
+<!-- 4 Workspace Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-xl">
+<!-- Card 1: Universal Restoration -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary font-medium">
+            Single Autoencoder Baseline
+          </span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>~24 ms (CPU)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+          Universal Restoration
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+          One autoencoder restores clean, salt-and-pepper, blurred and occluded images in a single pass. Utilizes global reconstruction loss without explicit degradation segregation.
+        </p>
+<!-- Preview Strip showing Male Portrait input / output -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+<span>Input Degradation (Composite)</span>
+<span>Restored Latent Output</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded overflow-hidden aspect-square bg-surface-container">
+<img class="w-full h-full object-cover filter contrast-125 saturate-50" data-alt="Close-up documentary portrait of a mature middle-aged man with salt-and-pepper beard, wearing a navy collared jacket, with artificial simulated blur and digital noise degradation overlay, neutral realistic daylight lighting, fine detailed photographic look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGYbOOok-pkQUrx7BPMQQ4qWDQTyNZdg06udWBTUX4qVhC4qtBC_MlENCj5T8g-stxWTCfXujIywiZu7UqBzeeGgJl9-CL-bGgQJgp-QSPbgspQGOfF8AQa-jC6AGorfYOKCAqddp8h3gAw-y5rEkvp647W-OWE9lUYanPgPbZzZjECbDSBEMmUDdz8wd_4VpWpsT1HUAas-3BD3m_rVIPKJhTvWGIQ2p5i96LLDHhchJME43k_FnV"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-[10px] text-on-surface">Input (Degraded)</span>
+</div>
+<div class="relative rounded overflow-hidden aspect-square bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sharp restored studio photographic portrait of a smiling middle-aged man with graying beard, clear facial features, sharp skin texture, crisp lighting, cinematic depth of field, authentic restored male face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd8nMMF-W5AtghcbH0RbcJohpV5D_Dd7Y9JUUmXHOMcrCqJpJ-ED22X8D1T4zVw-UAhw8MyRkAKPcTuu5CCS4JMCq3grLgScl6qR1r_V2uDwK3xAuHjUqPS-FSVZQRJScblDhYnQYqkHWtZgLmTgSTvdunp7zy7-HHS7nvW0TOpHjST30s4286U0NNJrtFE_lKC3J92Bw0wa3JIDIIpcauVmJwUxTnpJofnUS9s9S3NoQtP6NrBOCO"/>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-medium">Reconstructed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-auto flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">loss: MSE + L1 Reg</span>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-medium hover:opacity-95 transition-opacity" data-path="universal-restoration" href="#">
+<span>Launch Workspace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Hard-Routed Restoration -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary font-medium">
+            Discrete Multi-Path Dispatch
+          </span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>6 ms gating + 18 ms specialist</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+          Hard-Routed Restoration
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+          A 4-class classifier dynamically inspects degradation and routes payloads to dedicated specialist autoencoders (Salt, Blur, Occlusion, or Identity bypass).
+        </p>
+<!-- Dynamic Dispatch State Visualizer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+<span>Classifier Prediction Vectors</span>
+<span class="text-tertiary font-medium">Argmax Selected: Expert-Blur</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface">Blur Specialist (Kernel 5×5)</span>
+<span class="font-mono text-primary font-medium">88.4%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 88.4%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm mt-1">
+<span class="text-on-surface-variant">Salt & Pepper Specialist</span>
+<span class="font-mono text-on-surface-variant">7.1%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 7.1%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm mt-1">
+<span class="text-on-surface-variant">Occlusion Specialist / Identity</span>
+<span class="font-mono text-on-surface-variant">4.5%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 4.5%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-auto flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">routing: Discrete Argmax</span>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-medium hover:opacity-95 transition-opacity" data-path="hard-routed-restoration" href="#">
+<span>Launch Workspace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Soft Mixture-of-Experts (MoE) -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary font-medium">
+            Continuous Latent Fusion
+          </span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>~26 ms (CPU)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+          Soft Mixture-of-Experts (MoE)
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+          A neural gating network computes continuous softmax weights across three specialists plus identity bypass with temperature τ control, eliminating harsh boundary switching.
+        </p>
+<!-- Soft Weights Distribution visual -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+<span>Softmax Blending Weights (τ = 0.85)</span>
+<span class="text-secondary font-mono">∑w_i = 1.000</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-center">
+<div class="flex flex-col p-2 bg-surface-container-lowest rounded">
+<span class="font-label-sm text-[10px] text-on-surface-variant">w_clean</span>
+<span class="font-mono text-label-md text-on-surface font-medium mt-0.5">0.12</span>
+<span class="text-[10px] text-outline font-label-sm">Bypass</span>
+</div>
+<div class="flex flex-col p-2 bg-surface-container-lowest rounded">
+<span class="font-label-sm text-[10px] text-on-surface-variant">w_salt</span>
+<span class="font-mono text-label-md text-on-surface font-medium mt-0.5">0.48</span>
+<span class="text-[10px] text-primary font-label-sm">Leading</span>
+</div>
+<div class="flex flex-col p-2 bg-surface-container-lowest rounded">
+<span class="font-label-sm text-[10px] text-on-surface-variant">w_blur</span>
+<span class="font-mono text-label-md text-on-surface font-medium mt-0.5">0.31</span>
+<span class="text-[10px] text-secondary font-label-sm">Co-active</span>
+</div>
+<div class="flex flex-col p-2 bg-surface-container-lowest rounded">
+<span class="font-label-sm text-[10px] text-on-surface-variant">w_occl</span>
+<span class="font-mono text-label-md text-on-surface font-medium mt-0.5">0.09</span>
+<span class="text-[10px] text-outline font-label-sm">Minor</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-auto flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">gate: Softmax(z / τ)</span>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-medium hover:opacity-95 transition-opacity" data-path="soft-mixture-of-experts" href="#">
+<span>Launch Workspace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Face-to-Sketch Generator -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary font-medium">
+            Conditional GAN Architecture
+          </span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>~32 ms (CPU)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+          Face-to-Sketch Generator
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+          Transforms face photography into high-fidelity sketches across 3 distinct artistic styles while strictly preserving facial identity, contour landmarks, and expressive realism.
+        </p>
+<!-- Preview Thumbnail with Male Portrait Sketch -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+<span>Identity Conditioning Photo</span>
+<span>Pencil / Charcoal Synthesis</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded overflow-hidden aspect-square bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial close portrait of a handsome adult man with wavy styled brown hair, light stubble beard, and soft window backlight in a neutral apartment setting, natural authentic facial geometry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtIqyyfOFGzz9LGSq5H5vlyJzan8NpUle0nqglvldCeDzKVIzKYCacuwnqPNltvhqAi05X3O0QHEBvXqFhzESmbvrV7sTtsgZlM-Lpwg2mW-jWvm7rPWOaD7auaGH7YYIEEkkUmd0yjyIhLaYnED5hPWc_WAK--yv4NCfB9u7Ft1v4DeL2bUOR5ewMU-hw98l01UV4UdO15MxMKr3evEYP-FlQ-wzTEIyvurs2OQ0ijvlcUjM91bHD"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-[10px] text-on-surface">Input Face</span>
+</div>
+<div class="relative rounded overflow-hidden aspect-square bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Detailed graphite pencil sketch portrait of the same young adult man with wavy hair, fine cross-hatching shade lines, realistic textured paper grain, artistic hand-drawn charcoal aesthetic preserving facial identity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJy1vXJ0c6bmbrCSjF5tzKCYmft6avuNPNJHW6zayW3KCyBoKz1T6i2XcT221568RnS4U5R4TVznE5fo8FPG6UIeMbD7i1bxUImi8r4LSmcnlK--fERf3iyoS2FLTx3hMzJ9C1bw5epAOn9gK-Go9fLdB6MLbDAHVLUcGqS9jlKH1syEIBaiK3wsZ4GG3pV0fnmA61_pCQJ0vK2bolJGg8igJVX5zj7KhyJlkc1iU-57lErspccSKg"/>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-medium">cGAN Sketch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-auto flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">styles: Pencil, Charcoal, Line</span>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-medium hover:opacity-95 transition-opacity" data-path="face-to-sketch-generator" href="#">
+<span>Launch Workspace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Comparative Architecture Matrix -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Architecture Comparative Matrix</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Benchmark breakdown across model topologies running on standard ONNX CPU backend.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span>Validated ONNX FP32 Graph</span>
+</div>
+</div>
+<!-- Clean Uncluttered Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Workspace / Model</th>
+<th class="py-space-sm px-space-md">Network Architecture</th>
+<th class="py-space-sm px-space-md">Degradation Coverage</th>
+<th class="py-space-sm px-space-md">Latency on CPU</th>
+<th class="py-space-sm px-space-md rounded-r-lg">Primary Advantage</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-md text-body-md">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Universal Restoration</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant">
+              Conv-Encoder-Decoder (4 Down/Up)
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              All in 1 Model (Salt, Blur, Occlusion)
+            </td>
+<td class="py-space-sm px-space-md font-mono text-label-md text-on-surface">
+              ~24 ms
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Zero dispatch complexity; minimal RAM footprint
+            </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Hard-Routed Restoration</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant">
+              ResNet-18 Classifier + 3 Dedicated Autoencoders
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Specific isolated noise profiles
+            </td>
+<td class="py-space-sm px-space-md font-mono text-label-md text-on-surface">
+              24 ms (6ms gate + 18ms AE)
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Sharpest specialized weights for isolated artifacts
+            </td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Soft Mixture-of-Experts</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant">
+              Neural Gate + Weighted Latent Fusion Head
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Compound / mixed noise corruptions
+            </td>
+<td class="py-space-sm px-space-md font-mono text-label-md text-on-surface">
+              ~26 ms
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Continuous smooth transitions without edge artifacts
+            </td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-medium text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Face-to-Sketch Generator</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant">
+              U-Net Generator + PatchGAN Discriminator
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              Non-photorealistic artistic synthesis
+            </td>
+<td class="py-space-sm px-space-md font-mono text-label-md text-on-surface">
+              ~32 ms
+            </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+              High-frequency pencil stroke & landmark preservation
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bottom System Status Bar -->
+<div class="w-full bg-surface-container-low rounded-xl px-space-lg py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm shadow-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md flex-wrap justify-center sm:justify-start">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="text-on-surface font-medium">ONNX Runtime v1.17</span>
+</div>
+<span>•</span>
+<span>Tensor Dim: 128×128 (N=1, C=3)</span>
+<span>•</span>
+<span>Execution Mode: CPU Multithreaded (4 Cores)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-on-surface font-medium">Pipeline: Idle & Ready</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-mono">100% Synced</span>
+</div>
+</div>
+</div>
+<script>
+  // Hub Card Launch handler micro-interaction
+  document.querySelectorAll('a[data-path]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetPath = link.getAttribute('data-path');
+      const targetNav = document.querySelector(`aside nav a[data-path="${targetPath}"]`);
+      if (targetNav) {
+        targetNav.click();
+      }
+    });
+  });
+</script></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-around px-space-xs" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="flex flex-col items-center justify-center p-1 bg-primary-container text-on-primary rounded-lg" data-path="overview-and-suite-hub" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Hub</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="universal-restoration" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Universal</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="hard-routed-restoration" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Hard-Route</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="soft-mixture-of-experts" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Soft-MoE</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="face-to-sketch-generator" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">GAN Sketch</span></a></nav></body></html>

@@ -1,0 +1,26 @@
+task: task1
+seed: 42
+architecture: spatial
+search:
+  study_name: task1_spatial
+  direction: minimize
+  trials: 20
+  epochs: 8
+  pruner_startup_trials: 5
+  pruner_warmup_steps: 2
+final:
+  lr: 0.0010450696520595522
+  batch_size: 16
+  latent_ch: 16
+  base_ch: 64
+  dropout: 0.011670299651260669
+  alpha: 0.6786965431751982
+  arch: spatial
+  epochs: 60
+baseline_best:
+  lr: 0.0001609852727057712
+  batch_size: 32
+  latent_dim: 1024
+  base_ch: 48
+  dropout: 0.06928354535372097
+  alpha: 0.7710590441479857

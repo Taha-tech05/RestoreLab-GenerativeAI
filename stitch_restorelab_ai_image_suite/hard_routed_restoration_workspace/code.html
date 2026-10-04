@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#faf8ff","background":"#faf8ff","on-primary-fixed":"#0f0069","on-primary":"#ffffff","secondary-container":"#6063ee","surface-dim":"#d2d9f4","tertiary-container":"#006e4b","secondary-fixed-dim":"#c0c1ff","primary-container":"#4f46e5","surface":"#faf8ff","primary-fixed":"#e2dfff","on-error-container":"#93000a","on-tertiary-container":"#67f4b7","on-secondary":"#ffffff","tertiary-fixed-dim":"#4edea3","error":"#ba1a1a","primary-fixed-dim":"#c3c0ff","on-secondary-fixed":"#07006c","surface-container-high":"#e2e7ff","on-tertiary-fixed-variant":"#005236","surface-container":"#eaedff","secondary-fixed":"#e1e0ff","primary":"#3525cd","inverse-on-surface":"#eef0ff","tertiary":"#005338","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#2f2ebe","on-tertiary":"#ffffff","outline":"#777587","on-surface":"#131b2e","surface-container-lowest":"#ffffff","inverse-primary":"#c3c0ff","on-surface-variant":"#464555","surface-variant":"#dae2fd","on-secondary-container":"#fffbff","inverse-surface":"#283044","outline-variant":"#c7c4d8","on-background":"#131b2e","on-primary-fixed-variant":"#3323cc","surface-container-highest":"#dae2fd","on-tertiary-fixed":"#002113","surface-tint":"#4d44e3","on-error":"#ffffff","on-primary-container":"#dad7ff","surface-container-low":"#f2f3ff","error-container":"#ffdad6","secondary":"#4648d4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2.5rem","margin":"2rem","gutter-mobile":"0.75rem"},"fontFamily":{"label-md":["JetBrains Mono"],"headline-md":["Geist"],"body-sm":["Geist"],"label-sm":["JetBrains Mono"],"display-lg":["Geist"],"display-lg-mobile":["Geist"],"headline-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-md":["Geist"],"label-lg":["JetBrains Mono"],"body-lg":["Geist"],"headline-lg":["Geist"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: geist
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMMOLOQUaexaluksFu3eAZMsSENZbMctQGUh6TO9e230SY3YexL9u8-Uf4vzDmr3f5ciFJrM8xwGEkLUpzkPz-0yH3zuaI1CLLRW6vFnNuMfdWs9q6OMd5TKZq9_jklQE4MgIC2y1C4hBx8OcNK4G6JFzx-Mj2Zd_ZYKg5FBpsbhXzQvW-lEWnzJWj4g2v6BAFA0rDm6d3PtHgTGgGoTlICGRwpBTz4wvew6tMWRtRhl05W3duHVu1wuY"/><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">RestoreLab</span><span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">v2.4</span></div></div><div class="flex items-center gap-space-md"><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Backend: Online</span></div><button aria-label="Toggle color mode" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="hidden md:flex fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex-col py-space-lg px-space-md"><div class="px-space-sm mb-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Workspaces</span></div><nav class="flex-1 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview-and-suite-hub" href="#"><span class="font-body-md text-body-md leading-snug">Overview & Suite Hub</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Suite central connector</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="universal-restoration" href="#"><span class="font-body-md text-body-md leading-snug">Universal Restoration</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Single Autoencoder Baseline</span></a><a aria-current="page" class="flex flex-col px-space-sm py-2 transition-colors bg-primary-container text-on-primary rounded-lg" data-path="hard-routed-restoration" href="#"><span class="font-body-md text-body-md leading-snug">Hard-Routed Restoration</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Discrete Classifier Routing</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="soft-mixture-of-experts" href="#"><span class="font-body-md text-body-md leading-snug">Soft Mixture-of-Experts</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Continuous Latent Blending</span></a><a class="flex flex-col px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="face-to-sketch-generator" href="#"><span class="font-body-md text-body-md leading-snug">Face-to-Sketch Generator</span><span class="font-label-sm text-label-sm text-on-surface-variant opacity-80">Conditional GAN Synthesis</span></a></nav></aside><div class="md:pl-72 flex flex-col min-h-screen"><main class="w-full pt-16 pb-20 md:pb-gutter px-gutter-mobile md:px-gutter flex-1 bg-background"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Workspace Header -->
+<header class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Hard-Routed Restoration</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+          ONNX Runtime · CPU · input 128×128
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A classifier picks one specialist autoencoder based on discrete latent damage signatures.</p>
+</div>
+<!-- Quick Status / Reset Action -->
+<div class="flex items-center gap-space-sm self-start sm:self-auto">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="reset-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+        Reset Pipeline
+      </button>
+</div>
+</header>
+<!-- Workspace Grid: Sidebar Controls (~320px) + Main Routing & Visual Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Configuration Panel (~300px to 320px on desktop) -->
+<section class="lg:col-span-4 xl:col-span-3 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Image Upload & Preset Dropzone -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Input Source</label>
+<div class="group relative flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all" id="dropzone">
+<span class="material-symbols-outlined text-[32px] text-primary mb-1 group-hover:scale-105 transition-transform">cloud_upload</span>
+<p class="font-body-sm text-body-sm text-on-surface text-center font-medium">Click to upload or drag image</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-0.5">JPG, PNG (Auto-normalized 128×128)</p>
+<input accept="image/*" class="hidden" id="file-input" type="file"/>
+</div>
+<button class="mt-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-medium transition-colors" id="sample-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">shuffle</span>
+            Use sample image
+          </button>
+</div>
+<div class="h-px bg-surface-container-high"></div>
+<!-- Mode Toggle -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Operating Mode</label>
+<div class="grid grid-cols-2 p-1 rounded-lg bg-surface-container-low gap-1" role="radiogroup">
+<button class="mode-tab py-1.5 px-2 rounded-md font-label-sm text-label-sm text-center font-medium transition-colors bg-surface-container-lowest text-on-surface shadow-sm" data-mode="apply" type="button">
+              Apply corruption
+            </button>
+<button class="mode-tab py-1.5 px-2 rounded-md font-label-sm text-label-sm text-center font-medium transition-colors text-on-surface-variant hover:text-on-surface" data-mode="preset" type="button">
+              Image corrupted
+            </button>
+</div>
+</div>
+<!-- Corruption Type Selector -->
+<div class="flex flex-col gap-space-xs" id="corruption-panel">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Corruption Type</label>
+<span class="font-label-sm text-label-sm text-primary font-medium" id="selected-type-label">Salt-and-Pepper</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all text-left" data-type="clean" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Clean</span>
+</button>
+<button class="type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-medium transition-all text-left shadow-sm" data-type="salt-pepper" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span>Salt & Pepper</span>
+</button>
+<button class="type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all text-left" data-type="blur" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Gaussian Blur</span>
+</button>
+<button class="type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all text-left" data-type="occlusion" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Occlusion</span>
+</button>
+</div>
+</div>
+<!-- Severity Selector -->
+<div class="flex flex-col gap-space-xs" id="severity-panel">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Severity</label>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold" id="severity-indicator">High (σ=0.72)</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="sev-btn py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md text-center transition-colors" data-sev="low" type="button">
+              Low
+            </button>
+<button class="sev-btn py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md text-center transition-colors" data-sev="med" type="button">
+              Medium
+            </button>
+<button class="sev-btn py-1.5 px-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md text-center font-medium shadow-sm transition-colors" data-sev="high" type="button">
+              High
+            </button>
+</div>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full mt-2 py-3 px-4 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm font-medium shadow-md transition-all flex items-center justify-center gap-2 group" id="execute-btn" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">bolt</span>
+<span>Route & Restore</span>
+</button>
+</div>
+<!-- Quick Diagnostics / Architecture Overview -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Routing Topology</span>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<p class="font-body-sm text-body-sm leading-snug">Hard gate → 4 dedicated autoencoder heads with discrete weight execution.</p>
+</div>
+</div>
+</section>
+<!-- Main Inspection & Output Area -->
+<main class="lg:col-span-8 xl:col-span-9 flex flex-col gap-space-lg">
+<!-- Classifier Routing Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Badges & Expert Selection Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+<span>Predicted: <strong class="font-medium text-primary" id="predicted-badge">Salt-and-Pepper</strong></span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Selected expert: <strong class="font-medium" id="expert-badge">Salt expert</strong></span>
+</div>
+</div>
+<!-- Latency chips row -->
+<div class="flex items-center gap-1.5 self-start sm:self-auto flex-wrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+              Classifier: <span class="font-semibold ml-1 text-on-surface">6 ms</span>
+</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+              Expert: <span class="font-semibold ml-1 text-on-surface">18 ms</span>
+</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm shadow-sm">
+              Total: <span class="font-semibold ml-1">24 ms</span>
+</span>
+</div>
+</div>
+<!-- 4 Discrete Horizontal Probability Bars -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Clean -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+                Clean State (Identity bypass)
+              </span>
+<span class="font-mono">4%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full transition-all duration-500" style="width: 4%"></div>
+</div>
+</div>
+<!-- Salt and Pepper (Active High Probability) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface font-medium">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                Salt-and-Pepper Noise
+              </span>
+<span class="font-mono font-bold text-primary">86%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden shadow-inner">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500 shadow-sm" style="width: 86%"></div>
+</div>
+</div>
+<!-- Gaussian Blur -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+                Gaussian Blur
+              </span>
+<span class="font-mono">7%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full transition-all duration-500" style="width: 7%"></div>
+</div>
+</div>
+<!-- Occlusion -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+                Occlusion & Masks
+              </span>
+<span class="font-mono">3%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full transition-all duration-500" style="width: 3%"></div>
+</div>
+</div>
+</div>
+<!-- Latent Gating Status Line -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2 bg-surface-container-low px-3 py-2 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Routing decision converged with softmax confidence > 0.85 threshold.</span>
+</div>
+<span class="font-mono hidden md:inline">ArgMax idx: #1 [SaltAE_128]</span>
+</div>
+</div>
+<!-- Side-by-Side Image Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Card 1: Input (Corrupted) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Input (corrupted)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Resized to 128×128</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">grain</span>
+              Salt-and-Pepper
+            </span>
+</div>
+<!-- Image Container -->
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center group shadow-inner">
+<img alt="Corrupted input male portrait" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1WOqLE_Ou-eccHvC0uGdnALjMuRlQx3b00ckTkHYuTeS41Eyv6f6m3O_7C4fJIFqqYlFNSfjhWbHEtTjMjyfV0Rc1-J0X-jcWIca6i44uxQThhT8t46l2DK4J_Zkb2qPidQvVD75EsWccPtGmN9N2RjW4sTHs4uOFYXnaucPpVv7RA8ZdPeUGF4roXZkXTTbtmnQyxAdqx6yAhoIe8T41KaCzXsrk19Mqwp1_zeS9QupSDNmfl9HyrmDg"/>
+<!-- Corner HUD Tag -->
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface font-mono shadow-sm">
+              Source 128px
+            </div>
+</div>
+<!-- Card 1 Footer / Metadata -->
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">PSNR: 14.82 dB</span>
+<span class="font-mono">SSIM: 0.428</span>
+</div>
+</article>
+<!-- Card 2: Restored Output -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md ring-2 ring-primary-container/20">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Restored output</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Synthesized by Salt Expert AE</span>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-medium transition-colors shadow-sm" id="download-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Output</span>
+</button>
+</div>
+<!-- Image Container -->
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center group shadow-inner">
+<img alt="Restored clean male portrait" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1UW3LySmgVNRz3o9Qi2W5tFA2Fh5ANlQA5ZsFEcvO4Hxx3rug3TYyJDGLKQw7iQBku9kwDE1dQwY22yT4NmL8pLKr5MRU9YkEb3x527TOVFLsgJAuMD3MXdyRbxrCOw6wlqdVE5R8NVr4j_5QlrfAN7_btEs9yzVPICttYUbGyIgJ2csA_5MwgvGx84IlMJOOUth94nrb-1uMJWJCOswjdj6La2w1U-viUjwQJ_VqvIQXvu7FVE8xSNS2Q"/>
+<!-- Corner HUD Tag -->
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface font-mono shadow-sm">
+              Output 128px
+            </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-mono shadow-sm">
+              Converged
+            </div>
+</div>
+<!-- Card 2 Footer / Performance Metrics -->
+<div class="flex items-center justify-between pt-1 text-on-surface font-label-sm text-label-sm">
+<span class="font-mono text-tertiary font-medium">PSNR: 32.14 dB (+17.32)</span>
+<span class="font-mono text-tertiary font-medium">SSIM: 0.941 (+0.513)</span>
+</div>
+</article>
+</div>
+</main>
+</div>
+</div>
+<script>
+  (function initHardRouted() {
+    const typeButtons = document.querySelectorAll('.type-btn');
+    const sevButtons = document.querySelectorAll('.sev-btn');
+    const modeTabs = document.querySelectorAll('.mode-tab');
+    const selectedTypeLabel = document.getElementById('selected-type-label');
+    const predictedBadge = document.getElementById('predicted-badge');
+    const expertBadge = document.getElementById('expert-badge');
+    const executeBtn = document.getElementById('execute-btn');
+    const sampleBtn = document.getElementById('sample-btn');
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
+    const downloadBtn = document.getElementById('download-btn');
+
+    const expertMap = {
+      'clean': { name: 'Clean', expert: 'Identity bypass', icon: 'remove_circle_outline' },
+      'salt-pepper': { name: 'Salt-and-Pepper', expert: 'Salt expert', icon: 'grain' },
+      'blur': { name: 'Gaussian Blur', expert: 'Blur expert', icon: 'blur_on' },
+      'occlusion': { name: 'Occlusion', expert: 'Occlusion expert', icon: 'layers_clear' }
+    };
+
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeButtons.forEach(b => {
+          b.className = 'type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all text-left';
+          const dot = b.querySelector('span:first-child');
+          if (dot) dot.className = 'w-2 h-2 rounded-full bg-outline-variant';
+        });
+
+        btn.className = 'type-btn flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-medium transition-all text-left shadow-sm';
+        const dot = btn.querySelector('span:first-child');
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-tertiary-fixed';
+
+        const t = btn.getAttribute('data-type');
+        if (expertMap[t]) {
+          selectedTypeLabel.textContent = expertMap[t].name;
+          predictedBadge.textContent = expertMap[t].name;
+          expertBadge.textContent = expertMap[t].expert;
+        }
+      });
+    });
+
+    sevButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sevButtons.forEach(b => {
+          b.className = 'sev-btn py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md text-center transition-colors';
+        });
+        btn.className = 'sev-btn py-1.5 px-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md text-center font-medium shadow-sm transition-colors';
+      });
+    });
+
+    modeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        modeTabs.forEach(t => {
+          t.className = 'mode-tab py-1.5 px-2 rounded-md font-label-sm text-label-sm text-center font-medium transition-colors text-on-surface-variant hover:text-on-surface';
+        });
+        tab.className = 'mode-tab py-1.5 px-2 rounded-md font-label-sm text-label-sm text-center font-medium transition-colors bg-surface-container-lowest text-on-surface shadow-sm';
+      });
+    });
+
+    dropzone.addEventListener('click', () => fileInput.click());
+
+    executeBtn.addEventListener('click', () => {
+      const originalText = executeBtn.innerHTML;
+      executeBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Routing...</span>';
+      executeBtn.disabled = true;
+      setTimeout(() => {
+        executeBtn.innerHTML = originalText;
+        executeBtn.disabled = false;
+      }, 400);
+    });
+
+    sampleBtn.addEventListener('click', () => {
+      sampleBtn.classList.add('scale-95');
+      setTimeout(() => sampleBtn.classList.remove('scale-95'), 150);
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const original = downloadBtn.innerHTML;
+      downloadBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span><span>Saved</span>';
+      setTimeout(() => {
+        downloadBtn.innerHTML = original;
+      }, 1400);
+    });
+  })();
+</script></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-around px-space-xs" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="overview-and-suite-hub" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Hub</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="universal-restoration" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Universal</span></a><a aria-current="page" class="flex flex-col items-center justify-center p-1 bg-primary-container text-on-primary rounded-lg" data-path="hard-routed-restoration" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Hard-Route</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="soft-mixture-of-experts" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">Soft-MoE</span></a><a class="flex flex-col items-center justify-center p-1 text-on-surface-variant hover:text-on-surface" data-path="face-to-sketch-generator" href="#"><span class="font-label-sm text-label-sm text-center leading-tight">GAN Sketch</span></a></nav></body></html>

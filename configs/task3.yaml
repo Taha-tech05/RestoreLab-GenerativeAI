@@ -1,0 +1,15 @@
+task: task3
+seed: 42
+search:
+  study_name: task3_moe
+  direction: minimize
+  trials: 12
+  epochs_warm: 1
+  epochs_joint: 3
+final:
+  # Notebook derives these values from the Optuna study at runtime.
+  from_study: task3_moe
+  batch_size: 32
+  warm_lr: 0.0001
+  warm_epochs: 3
+  joint_epochs: 20

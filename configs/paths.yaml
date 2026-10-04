@@ -1,0 +1,6 @@
+data_root: data
+out_dir: experiments
+ckpt_dir: checkpoints
+model_dir: models
+pet_subdir: .
+fs2k_subdir: FS2K
