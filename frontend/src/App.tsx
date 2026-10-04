@@ -220,3 +220,5 @@ function workspaceLoaded(health: HealthResponse | null, path: string) {
   const required = path === '/hard' ? ['classifier', 'salt', 'blur', 'occlusion'] : [workspaces.find(item => item.path === path)?.model || '']
   return required.every(name => !!health.models[name]?.loaded)
 }
+
+export default App

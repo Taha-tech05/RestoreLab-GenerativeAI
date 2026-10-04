@@ -1,6 +1,6 @@
-# Verification log
+﻿# Verification log
 
-Verification was performed on Windows PowerShell from the repository root. No training, Optuna study, full evaluation, package install, Docker command, or notebook cell was run. The environment did not match the attachment’s claim that dependencies were installed: `.venv` is missing core training and backend packages; system Python has Torch and ONNX Runtime but not torchvision/FastAPI. Node, npm, Docker, and the Git executable are not on `PATH`.
+Verification was performed on Windows PowerShell from the repository root. No training, Optuna study, full evaluation, package install, Docker command, or notebook cell was run. The environment did not match the attachmentâ€™s claim that dependencies were installed: `.venv` is missing core training and backend packages; system Python has Torch and ONNX Runtime but not torchvision/FastAPI. Node, npm, Docker, and the Git executable are not on `PATH`.
 
 ## Stage summary
 
@@ -101,7 +101,7 @@ probs sum: [1.0]
 weights sum: [1.0]
 ```
 
-This matches the stated display value 1.26 to two decimals; the trained model’s saved temperature is baked into its graph.
+This matches the stated display value 1.26 to two decimals; the trained modelâ€™s saved temperature is baked into its graph.
 
 Parity command:
 `python scripts/verify_onnx.py --ckpt-dir pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project --onnx-dir models --out-dir verification_outputs --config configs/task4.yaml`
@@ -187,15 +187,102 @@ pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task3_sof
 
 | Endpoint | Min | Max | Mean | Verdict |
 |---|---:|---:|---:|---|
-| Universal restoration | — | — | — | BLOCKED: backend dependencies unavailable; endpoint was not called. |
-| Hard routing | — | — | — | BLOCKED: backend dependencies unavailable; endpoint was not called. |
-| Soft MoE | — | — | — | BLOCKED: backend dependencies unavailable; endpoint was not called. |
-| Face-to-sketch | — | — | — | BLOCKED: backend dependencies unavailable; endpoint was not called. |
+| Universal restoration | â€” | â€” | â€” | BLOCKED: backend dependencies unavailable; endpoint was not called. |
+| Hard routing | â€” | â€” | â€” | BLOCKED: backend dependencies unavailable; endpoint was not called. |
+| Soft MoE | â€” | â€” | â€” | BLOCKED: backend dependencies unavailable; endpoint was not called. |
+| Face-to-sketch | â€” | â€” | â€” | BLOCKED: backend dependencies unavailable; endpoint was not called. |
 
 ## Remaining problems, highest impact first
 
-1. Install/provide the declared Python, Node/npm, Git, and Docker toolchains in the verification environment; current dependencies contradict the attachment’s environment assumption. The live backend/frontend/Compose evaluation and API image analysis remain blocked.
+1. Install/provide the declared Python, Node/npm, Git, and Docker toolchains in the verification environment; current dependencies contradict the attachmentâ€™s environment assumption. The live backend/frontend/Compose evaluation and API image analysis remain blocked.
 2. Replace the README dataset/model/W&B URL placeholders before distribution.
 3. Git is unavailable, so large-file tracked status and LFS coverage are unknown. Large local files are ignored by visible patterns, but ignored status is not equivalent to verified Git tracking status.
 
 No application URL is currently running. The intended Compose URL remains `http://localhost:3000` after Docker is available.
+
+## Local browser-start preflight (2026-10-04)
+
+Per the start-local request, only tool/dependency checks were performed. Startup stopped because the specified backend requirements could not be installed.
+
+```text
+.\.venv\Scripts\python.exe --version
+Python 3.13.7
+node --version
+v24.21.0
+npm --version
+PowerShell blocked npm.ps1 because script execution is disabled.
+npm.cmd --version
+11.19.0
+.\.venv\Scripts\python.exe -c "import fastapi, uvicorn, onnxruntime, PIL, numpy, scipy, multipart; print('backend deps OK')"
+ModuleNotFoundError: No module named 'fastapi'
+```
+
+Package availability in `.venv`:
+
+```text
+fastapi: False
+uvicorn: False
+onnxruntime: False
+PIL: False
+numpy: False
+scipy: False
+multipart: False
+```
+
+Install attempt:
+
+```text
+.\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+ERROR: Could not find a version that satisfies the requirement fastapi==0.115.12 (from versions: none)
+ERROR: No matching distribution found for fastapi==0.115.12
+```
+
+No source fix was made and neither server was started. Further steps were stopped by the requested prerequisite gate.
+
+## Frontend startup error follow-up (2026-10-04)
+
+Reported Vite/esbuild error: `No matching export in "src/App.tsx" for import "default"` from `src/main.tsx`.
+
+Fixes and rechecks:
+
+| File | Fix | Recheck |
+|---|---|---|
+| `frontend/src/App.tsx` | Added `export default App` for the existing `import App from './App'`. | Detached Vite server now starts (PID 28188). `curl.exe` returned HTTP 200 for `/` and `/src/App.tsx`; the missing-default-export error no longer appears in `frontend_err.log`. |
+| `frontend/package.json` | Added React 18 type packages `@types/react` and `@types/react-dom` as dev dependencies. | Build still reports missing declaration files because those packages are not in `node_modules`; the registry cannot be reached in this environment, so installation could not complete. |
+
+Actual install attempts:
+
+```text
+npm.cmd install --save-dev @types/react @types/react-dom
+npm error code ENOTCACHED
+npm error request to https://registry.npmjs.org/@types%2freact failed: cache mode is 'only-if-cached' and no cached response is available.
+
+npm.cmd --offline=false install --save-dev @types/react @types/react-dom
+npm error code ECONNREFUSED
+npm error request to https://registry.npmjs.org/@types%2freact failed, reason: connect ECONNREFUSED 127.0.0.1:9
+```
+
+`npm.cmd run build` after adding the App export reported TS7016 for missing React/React DOM declarations and TS7026 for absent JSX intrinsic element declarations (the captured output was 490 lines and was truncated). After declaring the packages in `package.json`, rerunning the build produced the same diagnostics because they could not be installed. Run `npm install` and `npm run build` when the configured npm registry/proxy is reachable.
+
+The Vite dev server remains running at `http://127.0.0.1:5173/`. Its `/api/health` proxy currently returns HTTP 500 because no backend is running; the backend venv package install previously failed. Vite log excerpt:
+
+```text
+VITE v6.1.0 ready in 2407 ms
+Local: http://127.0.0.1:5173/
+[vite] http proxy error: /api/health
+AggregateError [ECONNREFUSED]
+```
+
+
+## Local model mount correction (2026-10-04)
+
+- The browser's “This model is not loaded. Check the backend model mount.” message came from a backend started with its container default `/app/models` on Windows. The seven ONNX files are present in the repository `models/` folder.
+- Started the local backend with `.venv\Scripts\python.exe` and `MODEL_DIR=C:\Users\HP\Desktop\genai1\models` on `127.0.0.1:8001`. The old port 8000 is occupied by other Python processes and reports all models missing; it was left untouched.
+- Updated `frontend/vite.config.ts` so `/api` proxies to `http://127.0.0.1:8001`.
+- Verified `http://127.0.0.1:8001/api/health` and `http://127.0.0.1:5173/api/health`: status `ok`; universal, classifier, salt, blur, occlusion, soft, and sketch are loaded. All seven model files load from `./models`.
+
+## Restore endpoint 500 correction (2026-10-04)
+
+- Reproduced `POST /api/restore/universal` and found `psnr_ssim` subtracting clean HWC pixels from ONNX NCHW output, raising a NumPy broadcasting `ValueError` after successful inference.
+- Updated `backend/app/main.py` to convert batched NCHW and CHW restoration outputs to HWC inside the metric helper. This applies to universal, hard, and soft metric responses and leaves model inputs/inference preprocessing unchanged.
+- Restarted the local `.venv` backend on port 8001. Verified the frontend proxy request to `/api/restore/universal` with sample `pet-1.png`, salt/medium, seed 42: HTTP 200; inference_ms 41.10; PSNR 25.999; SSIM 0.7856.

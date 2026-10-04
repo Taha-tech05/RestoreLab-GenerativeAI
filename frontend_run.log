@@ -1,0 +1,10 @@
+
+> restorelab-frontend@1.0.0 dev
+> vite --host 0.0.0.0 --host 127.0.0.1 --port 5173
+
+
+  VITE v6.1.0  ready in 2407 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+9:54:45 PM [vite] vite.config.ts changed, restarting server...
+9:54:45 PM [vite] server restarted.

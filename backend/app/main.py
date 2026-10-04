@@ -178,6 +178,11 @@ def run_named(session, feeds: dict[str, np.ndarray]):
 
 
 def psnr_ssim(clean: np.ndarray, restored: np.ndarray):
+    # ONNX restoration outputs are batched NCHW; metric inputs are HWC images.
+    if restored.ndim == 4:
+        restored = restored[0].transpose(1, 2, 0)
+    elif restored.ndim == 3 and restored.shape[0] == 3:
+        restored = restored.transpose(1, 2, 0)
     mse = float(np.mean((clean - restored) ** 2))
     psnr = float("inf") if mse == 0 else float(10 * np.log10(1.0 / mse))
     # Global luminance/channel averaged SSIM, stabilized for data range 1.

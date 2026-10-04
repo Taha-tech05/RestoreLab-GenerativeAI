@@ -1,0 +1,4 @@
+9:18:11 PM [vite] http proxy error: /api/health
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1430:18)
+    at afterConnectMultiple (node:net:2099:7)
