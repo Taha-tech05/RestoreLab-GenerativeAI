@@ -1,4 +1,7 @@
 """Evaluate classifier and hard expert routing on the fixed Pet test manifest."""
+import sys
+from pathlib import Path as _BootstrapPath
+sys.path.insert(0, str(_BootstrapPath(__file__).resolve().parents[1]))
 import argparse
 import json
 from pathlib import Path

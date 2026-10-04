@@ -1,4 +1,7 @@
 """Task 2 corruption classifier Optuna search."""
+import sys
+from pathlib import Path as _BootstrapPath
+sys.path.insert(0, str(_BootstrapPath(__file__).resolve().parents[1]))
 import argparse
 import optuna
 from common.paths import add_common_args, ensure_output_dirs, resolve_paths

@@ -1,4 +1,7 @@
 """Train final style-conditioned FS2K cGAN."""
+import sys
+from pathlib import Path as _BootstrapPath
+sys.path.insert(0, str(_BootstrapPath(__file__).resolve().parents[1]))
 import argparse
 from pathlib import Path
 from common.paths import add_common_args, ensure_output_dirs, resolve_paths

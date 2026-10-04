@@ -36,7 +36,7 @@ def main():
         for heading, metas in (("inputs", session.get_inputs()), ("outputs", session.get_outputs())):
             print(f"  {heading}:")
             for meta in metas:
-                print(f"    {meta.name}: {shape(meta)}")
+                print(f"    {meta.name}: shape={shape(meta)}, dtype={meta.type}")
 
 
 if __name__ == "__main__":
