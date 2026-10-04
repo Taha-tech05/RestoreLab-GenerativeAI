@@ -2,3 +2,6 @@
 AggregateError [ECONNREFUSED]: 
     at internalConnectMultiple (node:net:1430:18)
     at afterConnectMultiple (node:net:2099:7)
+9:59:14 PM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:8001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2021:16)
