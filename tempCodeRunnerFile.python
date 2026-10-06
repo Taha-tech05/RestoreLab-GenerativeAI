@@ -1,0 +1,15 @@
+def desPlaintextBlock(plaintext):
+    """Split plaintext into 64-bit blocks (list of 64-char bit strings).
+    The last block is padded with 0s if it is shorter than 64 bits."""
+    if isinstance(plaintext, str):
+        plaintext = plaintext.encode("utf-8")
+    bits = "".join(format(byte, "08b") for byte in plaintext)
+ 
+    blocks = []
+    for i in range(0, len(bits), 64):
+        block = bits[i:i + 64]
+        if len(block) < 64:
+            block = block.ljust(64, "0")  # pad with 0s
+        blocks.append(block)
+    return blocks
+ 

@@ -10,6 +10,8 @@ frontend/*.tsbuildinfo
 data/
 datasets/
 models/
+/models-release.zip
+/models.zip
 checkpoints/
 *.pth
 *.pt

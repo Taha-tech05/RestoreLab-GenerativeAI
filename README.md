@@ -7,20 +7,12 @@ Experiment tracking is done with Weights & Biases (W&B) Cloud. There is no MLflo
 ## Prerequisites
 
 - Docker Desktop with Docker Compose v2, or Docker Engine and the Compose plugin.
-- The seven trained ONNX model files listed below.
+- The seven trained ONNX model files from the [model bundle release](https://github.com/Taha-tech05/RestoreLab-GenerativeAI/releases/latest/download/models.zip).
 - About 2 GB of free disk space for images and build layers; model files need roughly 320 MB.
 
 ## Get the ONNX models
 
-The supplied training artifacts include the ONNX files. Download them from the links below, or copy them from the [pet restoration training artifacts folder](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/) into `./models`. For a separately hosted bundle, replace these source links with your team's shared download URL before publishing the repository.
-
-- [task1_universal.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task1_universal.onnx)
-- [task2_classifier.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task2_classifier.onnx)
-- [task2_specialist_salt.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task2_specialist_salt.onnx)
-- [task2_specialist_blur.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task2_specialist_blur.onnx)
-- [task2_specialist_occlusion.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task2_specialist_occlusion.onnx)
-- [task3_soft_moe.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/task3_soft_moe.onnx)
-- [face2sketch.onnx](./pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/face2sketch.onnx)
+Download `models.zip` from the [latest GitHub release](https://github.com/Taha-tech05/RestoreLab-GenerativeAI/releases/latest/download/models.zip), then extract its seven `.onnx` files directly into the repository's `models/` directory. The model files are too large for regular Git tracking, so they are provided as a release asset.
 
 The filenames in `./models` must be exactly:
 
@@ -36,14 +28,19 @@ face2sketch.onnx
 
 The model files are ignored by Git. The backend still starts if one or more files are missing; open `http://localhost:8000/api/health` to see which models loaded. Workspaces whose required models are unavailable stay disabled until the files are present.
 
-If you are using the supplied training artifact folder, copy its exported ONNX files into the mount before startup:
+To publish or update the bundle, create a GitHub release in this repository and upload a ZIP asset named exactly `models.zip`. The README download URL above follows the latest release. The provided archive is `models-release.zip`; rename it to `models.zip` before uploading, or create it with that name. In GitHub, open **Releases > Draft a new release**, choose a tag such as `models-v1`, attach the ZIP, then publish the release.
+
+With GitHub CLI authenticated for this repository, publish it from PowerShell:
 
 ```powershell
-Copy-Item pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/*.onnx models/
+Copy-Item models-release.zip models.zip
+gh release create models-v1 models.zip --title "Model bundle v1" --notes "RestoreLab ONNX model bundle"
 ```
 
-```sh
-cp pet_restoration_project-20261004T094832Z-1-001/pet_restoration_project/*.onnx models/
+To create a fresh bundle from the local `models/` folder in PowerShell:
+
+```powershell
+Compress-Archive -Path models/*.onnx -DestinationPath models.zip -Force
 ```
 
 ## Run with Docker Compose
